@@ -7,9 +7,9 @@ namespace PooPokedex
     {
       this.InitList();
     }
-    private List<Pokemon> pokemons;
+    private List<PokemonPlus> pokemons;
 
-		public List<Pokemon> Pokemons
+		public List<PokemonPlus> Pokemons
 		{
 			get { return this.pokemons; }
 		}
@@ -17,24 +17,24 @@ namespace PooPokedex
 		private void InitList()
 		{
 			// Instanciar a lista
-			this.pokemons = new List<Pokemon>();
-      Pokemon p = new Pokemon("Bulbasauro", "pokémon tipo planta");
+			this.pokemons = new List<PokemonPlus>();
+      PokemonPlus p = new PokemonPlus("Bulbasauro", "pokémon tipo planta", 100);
       this.pokemons.Add(p);
-      p = new Pokemon("Mew", "lendario psiquico");
+      p = new PokemonPlus("Mew", "lendario psiquico", 90);
       this.pokemons.Add(p);
-      p = new Pokemon("Mewtwo", "lendario psiquico");
+      p = new PokemonPlus("Mewtwo", "lendario psiquico", 20);
       this.pokemons.Add(p);
-      p = new Pokemon("Giratina", "lendario Fantasma");
+      p = new PokemonPlus("Giratina", "lendario Fantasma", 80);
       this.pokemons.Add(p);
-      p = new Pokemon("Flygon", "pokemon dragão");
+      p = new PokemonPlus("Flygon", "pokemon dragão", 12);
       this.pokemons.Add(p);
-      p = new Pokemon("Metagross", "pokemon de metal");
+      p = new PokemonPlus("Metagross", "pokemon de metal", 50);
       this.pokemons.Add(p);
-      p = new Pokemon("Muk", "pokemon de metal");
+      p = new PokemonPlus("Muk", "pokemon de metal", 60);
       this.pokemons.Add(p);
-      p = new Pokemon("Metagross", "pokemon toxico");
+      p = new PokemonPlus("Metagross", "pokemon toxico", 59);
       this.pokemons.Add(p);
-      p = new Pokemon("Metagross", "pokemon toxico");
+      p = new PokemonPlus("Metagross", "pokemon toxico", 90);
       this.pokemons.Add(p);
     }
 
@@ -42,6 +42,7 @@ namespace PooPokedex
     {
       for (int i = 0; i < this.Pokemons.Count; i++)
       {
+        Console.WriteLine("Codigo do pokemon: " + i);
         this.Pokemons[i].ShowPokemonData();
       }
     }
