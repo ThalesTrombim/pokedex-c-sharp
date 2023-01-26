@@ -9,7 +9,13 @@ namespace PooPokedex
 			this.Description = "";
 		}
 
-		private string name;
+    public Pokemon(string name, string description)
+    {
+      this.Name = name;
+      this.Description = description;
+    }
+
+    private string name;
 
 		public string Name {
 			get
@@ -41,6 +47,19 @@ namespace PooPokedex
 		{
 			Console.WriteLine("Nome do Pokémon: " + this.Name);
       Console.WriteLine("Descricao do Pokémon: " + this.Description);
+    }
+
+    public void ShowPokemonData(Boolean formated)
+    {
+      if(formated)
+      {
+        Console.WriteLine("Pokemon: " + this.Name + " - " + this.Description);
+      }
+      else
+      {
+        Console.WriteLine("Nome do Pokémon: " + this.Name);
+        Console.WriteLine("Descricao do Pokémon: " + this.Description);
+      }
     }
   }
 }
